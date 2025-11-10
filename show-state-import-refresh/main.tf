@@ -8,10 +8,11 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket = "remote-state-bucket"
-    key    = "commands/terraform.tfstate"
-    region = "us-east-1"
+  backend "azurerm" {
+    resource_group_name  = "rg-terraform-state"
+    storage_account_name = "terraformstate"
+    container_name       = "remote-state"
+    key                  = "commands/terraform.tfstate"
   }
 }
 
