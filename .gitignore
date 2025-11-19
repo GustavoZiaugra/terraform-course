@@ -1,2 +1,56 @@
-.terraform
-*/.terraform
+# Terraform
+.terraform/
+.terraform.lock.hcl
+.terraform.tfstate
+.terraform.tfstate.backup
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*.tfvars
+*.tfvars.json
+terraform.tfvars
+terraform.tfvars.json
+*.tfplan
+*.plan
+*.out
+plan.out
+*.tfbackup
+
+# Keys and sensitive files
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+aws-key
+azure-key
+# (If you keep private key files with other names, add them here)
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# CLI and credentials
+.terraformrc
+terraform.rc
+
+# Backup and temp
+*.bak
+*.backup
+*~
+
+# Logs
+*.log
+
+# Ignore local state files placed in subdirectories
+**/*.tfstate
+**/*.tfstate.backup
+**/plan.out
